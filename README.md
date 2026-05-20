@@ -7,9 +7,10 @@ Projeto simples de e-commerce de sapatos desenvolvido com:
 - CSS
 - JavaScript
 - Node.js
-- Express
 
-<img width="1536" height="1024" alt="Captura de tela 2029-05-20 144909" src="https://github.com/user-attachments/assets/2cddeecc-cb8f-4e2e-82e4-9ace9ba2c11b" />
+<img width="1918" height="1014" alt="Captura de tela 2026-05-20 161422" src="https://github.com/user-attachments/assets/2b03bb0a-a2b3-4dd3-858d-902c2b154f42" />
+<img width="1897" height="1027" alt="Captura de tela 2026-05-20 161410" src="https://github.com/user-attachments/assets/66235761-4d8e-4ef5-89cc-8be33a62b8ff" />
+
 O sistema possui uma API própria que fornece os dados dos produtos e um front-end responsável por consumir essas informações.
 
 ---
