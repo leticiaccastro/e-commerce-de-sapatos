@@ -1,48 +1,79 @@
+const produtos = [
 
-
-const sapatos = [
   {
     nome: "Nike Air Max",
     marca: "Nike",
-    modelo: "Air Max",
-    preco: 799.90,
-    cores: ["Preto", "Branco"],
-    tamanhos: [38, 39, 40, 41],
-    promocao: true,
-    imagem: "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+    preco: "799,90",
+    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjwHtG-Drj3YY69AXM_hNRu3NEi3SNMSIYzA&s",
+    promocao: true
   },
+
   {
-    nome: "Adidas Ultraboost",
+    nome: "Adidas Adistar 4",
     marca: "Adidas",
-    modelo: "Ultraboost",
-    preco: 699.90,
-    cores: ["Azul", "Branco"],
-    tamanhos: [37, 38, 39],
-    promocao: false,
-    imagem: "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+    preco: "699,90",
+    imagem: "https://s.freecorner.com.br/product/2025/09/tenis-adidas-adstar-4-azul-masculino-corrida-free-corner-jr0315-10.jpg?format=webp",
+    promocao: false
+  },
+
+  {
+    nome: "Puma 180 ",
+    marca: "Puma",
+    preco: "499,90",
+    imagem: "https://artwalk.vtexassets.com/arquivos/ids/549257/40210-1-011-1-AW-800X1000.jpg?v=638612542980930000",
+    promocao: true
+  },
+
+  {
+    nome: "Asics GEL-NYC",
+    marca: "Asics",
+    preco: "549,90",
+    imagem: "https://cdnimg.etiquetaunica.com.br/products/webp/tenis-asics-gel-nyc-azul-guy157-1690471132-0000003_v2.webp",
+    promocao: false
   }
+
 ];
 
-const container = document.getElementById('produtos');
+const grid = document.getElementById("product-grid");
+const cartCount = document.getElementById("cart-count");
 
-sapatos.forEach(sapato => {
-  container.innerHTML += `
-    <div class="card">
-      <img src="${sapato.imagem}" alt="${sapato.nome}">
+let carrinho = 0;
 
-      <h2>${sapato.nome}</h2>
+produtos.forEach(produto => {
 
-      <p><strong>Marca:</strong> ${sapato.marca}</p>
+  const card = document.createElement("div");
+  card.classList.add("card");
 
-      <p><strong>Modelo:</strong> ${sapato.modelo}</p>
+  card.innerHTML = `
 
-      <p><strong>Cores:</strong> ${sapato.cores.join(', ')}</p>
+    ${produto.promocao ? '<div class="promo">PROMOÇÃO</div>' : ''}
 
-      <p><strong>Tamanhos:</strong> ${sapato.tamanhos.join(', ')}</p>
+    <img src="${produto.imagem}" alt="${produto.nome}">
 
-      <p class="preco">R$ ${sapato.preco}</p>
+    <div class="card-content">
 
-      ${sapato.promocao ? '<span class="promocao">PROMOÇÃO</span>' : ''}
+      <h3>${produto.nome}</h3>
+
+      <div class="brand">Marca: ${produto.marca}</div>
+
+      <div class="price">R$ ${produto.preco}</div>
+
+      <button>
+        <i class="fa-solid fa-cart-shopping"></i>
+        Adicionar ao Carrinho
+      </button>
+
     </div>
+
   `;
+
+  const button = card.querySelector("button");
+
+  button.addEventListener("click", () => {
+    carrinho++;
+    cartCount.innerText = carrinho;
+  });
+
+  grid.appendChild(card);
+
 });
