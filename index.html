@@ -1,23 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Sapatos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Sapatos</title>
 
-    <link rel="sylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
+
 <body>
-    
-    <header>
-        <h1>Loja de Sapatos</h1>
-    </header>
 
-    <main>
-        <div id="produtos"
-        class="container"></div>
-    </main>
+  <!-- HEADER -->
 
-    <script src="script.js" ></script>
+  <header>
+
+    <div class="logo">
+      <i class="fa-solid fa-shoe-prints"></i>
+      Loja de Sapatos
+    </div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <div class="cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cart-count">0</span>
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Encontre o tênis perfeito para você</h1>
+
+      <p>
+        Os melhores modelos, marcas e preços estão aqui!
+      </p>
+
+      <button>Ver Produtos</button>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://authenticfeet.vtexassets.com/arquivos/ids/494586-800-800?v=638743816645230000&width=800&height=800&aspect=true">
+    </div>
+
+  </section>
+
+  <!-- PRODUTOS -->
+
+  <section class="products" id="produtos">
+
+    <h2>Nossos Produtos</h2>
+
+    <div class="product-grid" id="product-grid">
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+
+  <section class="about" id="sobre">
+
+    <h2>Sobre a ShoeStore</h2>
+
+    <p>
+      Somos especialistas em tênis modernos, esportivos e casuais.
+      Trabalhamos com as melhores marcas do mercado oferecendo qualidade,
+      conforto e estilo para o seu dia a dia.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 ShoeStore - Todos os direitos reservados
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
